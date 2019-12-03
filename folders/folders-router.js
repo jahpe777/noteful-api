@@ -16,9 +16,9 @@ foldersRouter
   .get((req, res, next) => {
     const knexInstance = req.app.get('db')
     FoldersService.getAllFolders(knexInstance)
-      .then(folders => {
+      .then(folders => 
         res.json(folders.map(serializeFolder))
-      })
+      )
       .catch(next)
   })
   .post(jsonParser, (req, res, next) => {
@@ -33,7 +33,7 @@ foldersRouter
     }
     FoldersService.insertFolder(
       req.app.get('db'),
-      name
+      { name: name }
     )
       .then(folder => {
         res

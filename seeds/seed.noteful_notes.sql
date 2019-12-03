@@ -1,4 +1,4 @@
-INSERT INTO noteful_notes (name, modified, folderId, content)
+INSERT INTO noteful_notes (name, modified, "folderId", content)
 VALUES
   ('Dogs', '2019-08-19 12:00:00', 1, 'Bark'),
   ('Cats', '2019-04-20 12:00:00', 3, 'Meow'),
